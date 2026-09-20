@@ -1,5 +1,6 @@
 import { ArrowRight, ShieldCheck, CheckCircle2, Star, Calendar, Sparkles, MapPin } from 'lucide-react';
 import { CLINIC_INFO } from '../data/clinicData';
+import doctorBadgeImage from '../assets/images/regenerated_image_1789890679648.jpg';
 
 interface HeroProps {
   onBookClick: () => void;
@@ -123,11 +124,12 @@ export function Hero({ onBookClick, onExploreServices }: HeroProps) {
               </div>
 
               {/* Doctor Mini Badge Card */}
-              <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-white p-3 sm:p-3.5 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-3">
+              <div className="absolute -bottom-6 -left-4 sm:-left-6 bg-white p-3 sm:p-3.5 rounded-[16px] shadow-lg shadow-slate-900/10 border border-slate-100 flex items-center gap-3.5">
                 <img
-                  src={CLINIC_INFO.doctorImage}
+                  src={doctorBadgeImage}
                   alt={CLINIC_INFO.doctorName}
-                  className="w-12 h-12 rounded-xl object-cover border-2 border-sky-500 shadow-xs"
+                  className="w-12 h-12 sm:w-14 sm:h-14 rounded-[14px] object-cover border-2 border-sky-500 shrink-0 shadow-xs bg-slate-100"
+                  style={{ objectPosition: 'center 15%' }}
                   loading="lazy"
                   referrerPolicy="no-referrer"
                 />

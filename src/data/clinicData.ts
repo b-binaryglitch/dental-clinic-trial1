@@ -1,4 +1,6 @@
 import { ServiceItem, Testimonial, FaqItem } from '../types';
+import doctorPortrait from '../assets/images/regenerated_image_1789890679648.jpg';
+import clinicInteriorImage from '../assets/images/regenerated_image_1789890678243.webp';
 
 export const CLINIC_INFO = {
   name: 'ODONTOLOGY',
@@ -27,8 +29,8 @@ export const CLINIC_INFO = {
   },
   mapsUrl: 'https://maps.app.goo.gl/MBL7PhCNiMMHp6Gs5',
   embedMapSrc: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.000000000000!2d87.8614!3d23.2324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjPCsDEzJzU2LjYiTiA4N8KwNTEnNDMuMCJF!5e0!3m2!1sen!2sin!4v1600000000000!5m2!1sen!2sin',
-  doctorImage: '/dr_saikat_banarjee.jpg',
-  clinicImage: '/clinic_interior.jpg',
+  doctorImage: doctorPortrait,
+  clinicImage: clinicInteriorImage,
 };
 
 export const SERVICES: ServiceItem[] = [

@@ -29,14 +29,15 @@ export function DoctorProfile({ onBookWithDoctor }: DoctorProfileProps) {
           
           {/* Doctor Image & Credential Card */}
           <div className="lg:col-span-5 flex flex-col items-center text-center">
-            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-slate-100 group">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 rounded-[16px] overflow-hidden shadow-xl shadow-slate-400/20 border-4 border-white bg-slate-100 group">
               <img
                 src={CLINIC_INFO.doctorImage}
                 alt={`${CLINIC_INFO.doctorName}, Dental Surgeon at ODONTOLOGY Clinic`}
-                className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover rounded-[12px] group-hover:scale-105 transition-transform duration-500"
+                style={{ objectPosition: 'center 15%' }}
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 ring-1 ring-inset ring-black/10 rounded-2xl" />
+              <div className="absolute inset-0 ring-1 ring-inset ring-black/5 rounded-[16px]" />
             </div>
 
             <div className="mt-6">
@@ -65,7 +66,7 @@ export function DoctorProfile({ onBookWithDoctor }: DoctorProfileProps) {
                 Patient-Centric Dental Care in Khosbagan
               </h4>
               <p className="mt-3 text-slate-600 leading-relaxed text-sm sm:text-base">
-                Dr. Saikat Banarjee is widely recognized in Bardhaman for his gentle clinical touch, thorough diagnostic explanations, and commitment to conservative tooth-saving practices. Believing that every natural tooth is irreplaceable, his treatment plans always prioritize preservation over unnecessary extractions.
+                Dr. Saikat Banerjee is widely recognized in Bardhaman for his gentle clinical touch, thorough diagnostic explanations, and commitment to conservative tooth-saving practices. Believing that every natural tooth is irreplaceable, his treatment plans always prioritize preservation over unnecessary extractions.
               </p>
             </div>
 
