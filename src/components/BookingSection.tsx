@@ -55,21 +55,28 @@ export function BookingSection({ initialTreatment }: BookingSectionProps) {
   const timeSlotLabel =
     timeSlot === 'morning' ? 'Morning Shift (10:00 AM – 2:00 PM)' : 'Evening Shift (5:00 PM – 8:30 PM)';
 
-  const generateWhatsAppUrl = () => {
-    const message = `Hello Dr. Saikat Banarjee (ODONTOLOGY Clinic),
+  const generateWhatsAppUrl = (tokenOverride?: string) => {
+    const token = tokenOverride || bookingConfirmed?.id || `ODT-${Math.floor(1000 + Math.random() * 9000)}`;
+    const selectedTreatment = treatment;
+    const preferredSlot = timeSlotLabel;
+    const notes = symptoms.trim();
 
-I would like to book a dental consultation appointment.
+    const message = `Hello Dr. Saikat Banerjee (ODONTOLOGY Clinic),
 
-*Patient Name:* ${patientName.trim()}
-*Phone:* ${cleanPhone}
-*Treatment Needed:* ${treatment}
-*Preferred Date:* ${preferredDate || 'Earliest available'}
-*Preferred Shift:* ${timeSlotLabel}
-*Symptoms / Notes:* ${symptoms.trim() || 'None'}
+*Appointment Booking Request*
+*Token ID:* ${token}
+
+*Patient Details:*
+• Name: ${patientName.trim()}
+• Phone: ${cleanPhone}
+• Treatment: ${selectedTreatment}
+• Preferred Date: ${preferredDate || 'Earliest available'}
+• Preferred Slot: ${preferredSlot}
+• Notes / Symptoms: ${notes || 'None'}
 
 Please confirm the slot availability at your Khosbagan clinic.`;
 
-    return `https://wa.me/${CLINIC_INFO.whatsappNumber}?text=${encodeURIComponent(message)}`;
+    return `https://wa.me/919773949063?text=${encodeURIComponent(message)}`;
   };
 
   const handleSubmitWhatsApp = (e: FormEvent) => {
@@ -83,19 +90,21 @@ Please confirm the slot availability at your Khosbagan clinic.`;
       return;
     }
 
-    // Generate confirmation slip state as well
+    // 1. Generate Appointment Token
     const token = `ODT-${Math.floor(1000 + Math.random() * 9000)}`;
+
+    // Retain in booking confirmation slip state
     setBookingConfirmed({
       id: token,
-      name: patientName,
+      name: patientName.trim(),
       phone: cleanPhone,
       treatment,
       date: preferredDate || 'Earliest Available',
       timeSlotText: timeSlotLabel,
     });
 
-    // Open WhatsApp
-    const url = generateWhatsAppUrl();
+    // 2. Open WhatsApp with the generated token explicitly injected
+    const url = generateWhatsAppUrl(token);
     window.open(url, '_blank');
   };
 
@@ -125,7 +134,7 @@ Please confirm the slot availability at your Khosbagan clinic.`;
             </h2>
 
             <p className="text-slate-300 text-base leading-relaxed">
-              Book online to avoid waiting times. Submitting opens a direct WhatsApp booking message to <strong className="text-white">Dr. Saikat Banarjee</strong> to confirm your slot in real-time.
+              Book online to avoid waiting times. Submitting opens a direct WhatsApp booking message to <strong className="text-white">Dr. Saikat Banerjee</strong> to confirm your slot in real-time.
             </p>
 
             <div className="space-y-3 pt-2">
@@ -180,7 +189,7 @@ Please confirm the slot availability at your Khosbagan clinic.`;
                       Appointment Request Dispatched!
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto">
-                      Your booking details have been prepared and sent via WhatsApp to Dr. Saikat Banarjee. Below is your clinical token slip:
+                      Your booking details have been prepared and sent via WhatsApp to Dr. Saikat Banerjee. Below is your clinical token slip:
                     </p>
                   </div>
 
@@ -235,7 +244,7 @@ Please confirm the slot availability at your Khosbagan clinic.`;
                     </button>
                     
                     <a
-                      href={generateWhatsAppUrl()}
+                      href={generateWhatsAppUrl(bookingConfirmed?.id)}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex-1 py-2.5 px-4 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs rounded-xl flex items-center justify-center gap-2 cursor-pointer transition-colors text-center"
@@ -417,7 +426,7 @@ Please confirm the slot availability at your Khosbagan clinic.`;
                   </button>
 
                   <p className="text-center text-[11px] text-slate-500">
-                    🔒 Direct encrypted chat with Dr. Saikat Banarjee's reception ({CLINIC_INFO.phone}). No spam guarantee.
+                    🔒 Direct encrypted chat with Dr. Saikat Banerjee's reception ({CLINIC_INFO.phone}). No spam guarantee.
                   </p>
                 </form>
               )}

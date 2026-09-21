@@ -7,7 +7,7 @@ interface FloatingActionsProps {
 
 export function FloatingActions({ onBookClick }: FloatingActionsProps) {
   const whatsappUrl = `https://wa.me/${CLINIC_INFO.whatsappNumber}?text=${encodeURIComponent(
-    'Hello Dr. Saikat Banarjee (ODONTOLOGY Clinic), I would like to book a dental consultation.'
+    'Hello Dr. Saikat Banerjee (ODONTOLOGY Clinic), I would like to book a dental consultation.'
   )}`;
 
   return (

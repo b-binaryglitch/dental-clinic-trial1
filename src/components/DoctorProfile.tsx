@@ -120,7 +120,7 @@ export function DoctorProfile({ onBookWithDoctor }: DoctorProfileProps) {
                 type="button"
                 className="bg-sky-600 hover:bg-sky-700 text-white font-semibold text-sm px-6 py-3 rounded-xl shadow-xs transition-colors flex items-center justify-center gap-2 cursor-pointer"
               >
-                <span>Consult with Dr. Saikat Banarjee</span>
+                <span>Consult with Dr. Saikat Banerjee</span>
               </button>
 
               <a

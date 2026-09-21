@@ -53,7 +53,7 @@ export function Footer() {
                 <a href="#services" className="hover:text-sky-400 transition-colors">Dental Treatments</a>
               </li>
               <li>
-                <a href="#doctor" className="hover:text-sky-400 transition-colors">Meet Dr. Saikat Banarjee</a>
+                <a href="#doctor" className="hover:text-sky-400 transition-colors">Meet Dr. Saikat Banerjee</a>
               </li>
               <li>
                 <a href="#appointment" className="hover:text-sky-400 transition-colors">Book Online Appointment</a>
@@ -131,7 +131,7 @@ export function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px]">
-          <p>© {currentYear} ODONTOLOGY - The Dental Clinic. All Rights Reserved. Supervised by Dr. Saikat Banarjee (BDS).</p>
+          <p>© {currentYear} ODONTOLOGY - The Dental Clinic. All Rights Reserved. Supervised by Dr. Saikat Banerjee (BDS).</p>
           
           <button
             onClick={scrollToTop}

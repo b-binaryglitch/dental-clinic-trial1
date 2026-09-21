@@ -51,7 +51,7 @@ export function TestimonialsSection() {
               What Our Patients Say
             </h2>
             <p className="mt-2 text-slate-600 text-base max-w-xl">
-              Real feedback from patients who received compassionate and high-standard dental care with Dr. Saikat Banarjee.
+              Real feedback from patients who received compassionate and high-standard dental care with Dr. Saikat Banerjee.
             </p>
           </div>
 

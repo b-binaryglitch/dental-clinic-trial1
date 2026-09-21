@@ -116,7 +116,7 @@ export function LocationContact() {
               </div>
 
               <a
-                href={`https://wa.me/${CLINIC_INFO.whatsappNumber}?text=Hello%20Dr.%20Saikat%20Banarjee,%20I%20would%20like%20to%20inquire%20about%20clinic%20timings.`}
+                href={`https://wa.me/${CLINIC_INFO.whatsappNumber}?text=Hello%20Dr.%20Saikat%20Banerjee,%20I%20would%20like%20to%20inquire%20about%20clinic%20timings.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold px-4 py-2.5 rounded-xl flex items-center gap-1.5 transition-colors shadow-2xs"

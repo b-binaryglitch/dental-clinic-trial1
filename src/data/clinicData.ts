@@ -221,7 +221,7 @@ export const FAQS: FaqItem[] = [
   {
     id: 'faq-2',
     question: 'How are clinical consultations and treatment plans conducted?',
-    answer: 'During your initial consultation, Dr. Saikat Banarjee conducts a thorough intraoral examination and digital diagnostic assessment to determine the root cause of your concern. Every treatment option is clearly explained to ensure you feel confident and comfortable before any procedure begins.',
+    answer: 'During your initial consultation, Dr. Saikat Banerjee conducts a thorough intraoral examination and digital diagnostic assessment to determine the root cause of your concern. Every treatment option is clearly explained to ensure you feel confident and comfortable before any procedure begins.',
     category: 'General',
   },
   {

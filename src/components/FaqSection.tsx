@@ -68,10 +68,10 @@ export function FaqSection() {
         <div className="mt-10 p-6 bg-white rounded-2xl border border-slate-200 text-center flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="text-left">
             <h4 className="font-bold text-slate-900 text-sm">Have a specific question about your teeth?</h4>
-            <p className="text-xs text-slate-500 mt-0.5">Dr. Saikat Banarjee or our reception team is happy to guide you.</p>
+            <p className="text-xs text-slate-500 mt-0.5">Dr. Saikat Banerjee or our reception team is happy to guide you.</p>
           </div>
           <a
-            href="https://wa.me/919773949063?text=Hello%20Dr.%20Saikat%20Banarjee,%20I%20have%20a%20question%20regarding%20dental%20treatment."
+            href="https://wa.me/919773949063?text=Hello%20Dr.%20Saikat%20Banerjee,%20I%20have%20a%20question%20regarding%20dental%20treatment."
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white px-4 py-2.5 rounded-xl font-semibold text-xs shadow-xs transition-colors whitespace-nowrap"
